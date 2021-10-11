@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[colorinlistoftodos]{todonotes}
+\pagestyle{empty}
+
+\title{Word ladders report}
+\author{Author 1 and Author 2}
+
+\begin{document}
+  \maketitle
+
+  \section{Results}
+
+  \todo[inline]{Briefly comment the results, did the script say all your solutions were correct? Approximately how long time does it take for the program to run on the largest input? What takes the majority of the time?}
+When I run the check solution script it says all solutions were correct, and the biggest test takes about 10 seconds to perform. The most time consuming part of the code is the BFS. 
+  \section{Implementation details}
+
+  \todo[inline]{How did you implement the solution? Which data structures were used? Which modifications to these data structures were used? What is the overall running time? Why?}
+So the implementation was made in 3 steps. First part is to read the data from the data files and put it into data structures which will be used in the later parts.
+I store the words in an ArrayList<String> and the connected words or neighbours in an ArrayList<ArrayList<Integer>> where each Integer represents one of the words and each word has its own list of neighbours. 
+The second part is to find all the neighbours and store them into the apprpriate list and index. The last part is to perform the bfs to find the 
+shortest route. Here we use a linkedlist as the queue and then just follow the algorithm. Overall running time should be O(n+m).
+\end{document}
